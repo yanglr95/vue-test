@@ -9,6 +9,11 @@ import DetailAnaPage from './pages/detail/analysis'
 import DetailCouPage from './pages/detail/count'
 import DetailForPage from './pages/detail/forecast'
 import DetailPubPage from './pages/detail/publish'
+import AdressPage from './pages/about'
+import AdressFilling from './pages/about/filling'
+import AdressProduct from './pages/about/product'
+import AdressSafety from './pages/about/safety'
+import AdressRisk from './pages/about/risk'
 Vue.use(VueRouter)
 Vue.use(VueResource)
 let router = new VueRouter({
@@ -42,6 +47,29 @@ let router = new VueRouter({
 				{
 					path: 'publish',
 					component: DetailPubPage
+				}
+			]
+		},
+		{
+			path: '/about',
+			component: AdressPage,
+			redirect: '/about/filling',
+			children: [
+				{
+					path: 'filling',
+					component: AdressFilling
+				},
+				{
+					path: 'product',
+					component: AdressProduct
+				},
+				{
+					path: 'safety',
+					component: AdressSafety
+				},
+				{
+					path: 'risk',
+					component: AdressRisk
 				}
 			]
 		}

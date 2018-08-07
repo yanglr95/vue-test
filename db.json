@@ -2,23 +2,23 @@
   "getNewsList": [
     {
       "id": 1,
-      "title": "新闻条目1新闻条目1新闻条目1新闻条目1",
-      "url": "http://starcraft.com"
+      "title": "菜鸟教程",
+      "url": "http://www.runoob.com/"
     },
     {
       "id": 2,
-      "title": "新闻条目2新闻条目2新闻条目2新闻条目2",
-      "url": "http://warcraft.com"
+      "title": "红小宝网站",
+      "url": "http://www.hoomxb.com"
     },
     {
       "id": 3,
-      "title": "新闻条3新闻条3新闻条3",
-      "url": "http://overwatch.com"
+      "title": "百度",
+      "url": "http://www.baidu.com"
     },
     {
       "id": 4,
-      "title": "新闻条4广告发布",
-      "url": "http://hearstone.com"
+      "title": "京东",
+      "url": "http://www.jd.com"
     }
   ],
   "login": {

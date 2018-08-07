@@ -24,23 +24,23 @@ export default {
     return {
       products: [
         {
-          name: '数据统计',
+          name: '纪念徽章',
           path: 'count',
           icon: require('../assets/images/1.png'),
           active: false
         },
         {
-          name: '数据预测',
+          name: '水晶吊坠',
           path: 'forecast',
           active: false
         },
         {
-          name: '流量分析',
+          name: '订制相册',
           path: 'analysis',
           active: false
         },
         {
-          name: '广告发布',
+          name: '音乐盒',
           path: 'publish',
           active: false
         }

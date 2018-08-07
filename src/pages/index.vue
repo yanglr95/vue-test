@@ -2,7 +2,7 @@
   <div class="index-wrap">
     <div class="index-left">
       <div class="index-left-block">
-        <h2>全部产品</h2>
+        <h2>类型</h2>
         
         <template v-for="product in productList">
           <h3>{{ product.title}}</h3>
@@ -19,6 +19,14 @@
         <h2>最新消息</h2>
         <ul>
           <li v-for="item in newsList">
+            <a :href="item.url" class="new-item">{{ item.title }}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="index-left-block lastest-adress">
+        <h2>信息披露</h2>
+        <ul>
+          <li v-for="item in adressList">
             <a :href="item.url" class="new-item">{{ item.title }}</a>
           </li>
         </ul>
@@ -85,77 +93,95 @@ export default {
       ],
       boardList: [
         {
-          title: '开放产品',
-          description: '开放产品是一款开放产品',
+          title: '订制相册',
+          description: '订制相册可以保留美好瞬间',
           id: 'car',
           toKey: 'analysis',
           saleout: false
         },
         {
-          title: '品牌营销',
-          description: '品牌营销帮助你的产品更好地找到定位',
+          title: '纪念徽章',
+          description: '纪念徽章是一件有意义的礼品',
           id: 'earth',
           toKey: 'count',
           saleout: false
         },
         {
-          title: '使命必达',
-          description: '使命必达快速迭代永远保持最前端的速度',
+          title: '水晶吊坠',
+          description: '水晶吊坠，送人的好选择',
           id: 'loud',
           toKey: 'forecast',
           saleout: true
         },
         {
-          title: '勇攀高峰',
-          description: '帮你勇闯高峰，到达事业的顶峰',
+          title: '音乐盒',
+          description: '畅想音乐无极限',
           id: 'hill',
           toKey: 'publish',
           saleout: false
         }
       ],
       newsList: [],
+      adressList: [
+        {
+          title: '备案进程',
+          url: '/about/filling'
+        },
+        {
+          title: '产品介绍',
+          url: '/about/product'
+        },
+        {
+          title: '安全保障',
+          url: '/about/safety'
+        },
+        {
+          title: '风控体系',
+          url: '/about/risk'
+        }
+      ],
       productList: {
         pc: {
-          title: 'PC产品',
+          title: '纪念品类型',
           list: [
             {
-              name: '数据统计',
+              name: '木雕纪念品',
               url: 'http://starcraft.com'
             },
             {
-              name: '数据预测',
+              name: '校园纪念品',
               url: 'http://warcraft.com'
             },
             {
-              name: '流量分析',
+              name: '水晶纪念品',
               url: 'http://overwatch.com',
               hot: true
             },
             {
-              name: '广告发布',
+              name: '旅游纪念品',
               url: 'http://hearstone.com'
             }
           ]
         },
         app: {
-          title: '手机应用类',
+          title: '纪念品订制',
           last: true,
           list: [
             {
-              name: '91助手',
+              name: '水杯订制',
               url: 'http://weixin.com'
             },
             {
-              name: '产品助手',
+              name: 'T恤订制',
               url: 'http://twitter.com',
               hot: true
             },
             {
-              name: '智能地图',
+              name: '印章订制',
               url: 'http://maps.com'
             },
             {
-              name: '团队语音',
+              name: '相册订制',
               url: 'http://phone.com'
             }
           ]
@@ -247,7 +273,10 @@ export default {
   margin-top: 20px;
 }
 .lastest-news {
-  min-height: 512px;
+  min-height: 200px;
+}
+.lastest-adress {
+  min-height: 312px;
 }
 .hot-tag {
   background: red;
